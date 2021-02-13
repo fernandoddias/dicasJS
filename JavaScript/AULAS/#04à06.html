@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMAÇÃO TESTES</title>
+
+    <style>
+       body {
+           background-color: rgba(136, 212, 212, 0.986);
+           color: white;
+           font: normal 20px Arial;
+    }
+    </style>
+
+</head>
+<body>
+ 
+    <script>
+        var nome = prompt('digite seu nome');
+        document.write(`olá, <strong>${nome}</strong> seu nome tem ${nome.length} letras.<br>`); //strong aplica negrito
+        document.write(`seu nome em maiusculo ${nome.toUpperCase()} letras.<br>`); //toUpperCase() comando para string em letra maiuscula com todos os acentos
+        document.write(`seu nome em minusculo ${nome.toLowerCase()} letras.<br>`); //toLowerCase() comando string em minuscula com todos os acentos.
+        
+
+        var numero1 = Number(window.prompt('Digite um número'));
+        var numero2 = Number(window.prompt('digite outro número'));
+
+        var s = numero1 + numero2
+
+        alert(`a soma entre ${numero1} e ${numero2} é igual à ${s}`);
+        // numero + numero = adição
+        // string + string = contatenação
+        
+        
+        document.write(`a soma entre ${numero1.toUpperCase()} e ${numero2} é igual à ${s}`);
+    
+
+    </script>
+</body>
+</html>

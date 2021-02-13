@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>test</title>
+
+    <style>
+        input{
+            background-color: rgb(164, 179, 164);
+            width: 250px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font: italic 15px arial;
+            margin-top: 100px;
+        }
+
+        p{
+            line-height: 50px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Qual sua Nacionalidade?</h1>
+    <h><strong>Qual seu país?</strong></h>
+    <input type="text" name="nacio" id="nacio">
+    <input type="button" value="Descubra sua Nacionalidade" onclick="pais()">
+    
+    <div id="br">
+    
+        <script>
+            function pais() {
+                var nacio = document.querySelector('input#nacio') // input da caixa, recebe tipo texto sua identificação é ID nacio
+                var br = document.querySelector('div#br') // vai receber a div br, ou seja tudo q for feito no JS pode ser mostrado no HTML em formato de strings e number
+                var pais = String (nacio.value) // na caixa de texto, se digita o valor, (recebe em nacio) valor de nacio é guardado ao clicar no botão
+
+                br.innerHTML = `<p> Seu País é <strong>${pais}</strong></p>`
+
+                if (pais == 'Brasil') { //lembre-se string por entre '' number reconhece automatico.
+                    br.innerHTML += `<p> Você é <strong>Brasileiro</strong></p>`
+                }else {
+                    br.innerHTML += `<p> Você é <strong>Estrangeiro</strong></p>`
+                }
+            }
+        </script>
+    </div>
+        
+</body>
+</html>
